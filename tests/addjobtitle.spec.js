@@ -56,6 +56,6 @@ test('Verify User can Job title', async ({ page }) => {
 
     //verify user navigated to job titles list 
 
-    await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewJobTitleList', {timeout: 10000})
+    await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewJobTitleList')
 
 })

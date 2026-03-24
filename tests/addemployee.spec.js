@@ -49,6 +49,6 @@ test('Verify User can create Employee', async ({ page }) => {
     await page.locator("//button[@type='submit']").click()
 
     // Wheter Personal detals is visible or not   // assertions with in 5 sec if not vissible 
-    await  expect(page.locator("//h6[text()='Personal Details']")).toBeVisible({timeout : 15000})
+    await  expect(page.locator("//h6[text()='Personal Details']")).toBeVisible()
 
 })
