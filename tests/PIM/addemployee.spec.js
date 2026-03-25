@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { faker } from '@faker-js/faker';
 
-import empdata from "../testdata/addemployee.json"
+import empdata from "../../testdata/addemployee.json"
 
 
 test('Verify User can create Employee', async ({ page }) => {
@@ -11,7 +11,7 @@ test('Verify User can create Employee', async ({ page }) => {
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 
     // Enter username 
-    await page.locator("input[name='username']").fill(process.env.APP_USERNAME)
+    await page.locator("input[name='usernamebfvnbf']").fill(process.env.APP_USERNAME)
 
     //Password enter 
     await page.locator("input[name='password']").fill(process.env.APP_PASSWORD)
