@@ -37,7 +37,8 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    baseURL: "https://opensource-demo.orangehrmlive.com",
+    baseURL: "https://preprod.opensource-demo.orangehrmlive.com",
+    headless: false,
     trace: "on",
     video : "on",
     screenshot : "on"
@@ -71,15 +72,13 @@ export default defineConfig({
     // },
 
     /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
+    {
+      name: 'Microsoft Edge',
+      use: { ...devices['Desktop Edge'], channel: 'msedge' },
+    },
     {
       name: 'Google Chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome',
-           //viewport : {width: 375, height:812}
-       },
+      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     },
   ],
 
