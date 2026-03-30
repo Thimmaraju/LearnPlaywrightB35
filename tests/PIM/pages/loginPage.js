@@ -32,6 +32,6 @@ export class LoginPage {
   }
 
   async isLoginSuccessful() {
-    return await this.page.waitForURL('**/dashboard/index', { timeout: 5000 }).catch(() => false);
+    return await this.page.waitForURL(/dashboard\/index/, { timeout: 5000 }).catch(() => false);
   }
 }

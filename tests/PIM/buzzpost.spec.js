@@ -23,14 +23,14 @@ test.describe('OrangeHRM Buzz Module - Post Creation and Verification', () => {
     
     // Wait for dashboard to load
     await page.waitForLoadState('networkidle');
-    await expect(page).toHaveURL('**/dashboard/index');
+    await expect(page).toHaveURL(/dashboard\/index/);
 
     // Step 3: Click on Buzz module
     await page.getByRole('link', { name: 'Buzz' }).click();
     
     // Wait for Buzz page to load
     await page.waitForLoadState('networkidle');
-    await expect(page).toHaveURL('**/buzz/viewBuzz');
+    await expect(page).toHaveURL(/buzz\/viewBuzz/);
 
     // Verify Buzz Newsfeed is displayed
     await expect(page.locator('text=Buzz Newsfeed')).toBeVisible();

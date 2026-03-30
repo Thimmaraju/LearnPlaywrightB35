@@ -21,7 +21,7 @@ export class BuzzPage {
   }
 
   async isBuzzPageDisplayed() {
-    await this.page.waitForURL('**/buzz/viewBuzz');
+    await this.page.waitForURL(/buzz\/viewBuzz/);
     return await this.buzzNewsfeedHeading.isVisible();
   }
 
