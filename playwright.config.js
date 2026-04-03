@@ -41,7 +41,8 @@ export default defineConfig({
     baseURL: "https://opensource-demo.orangehrmlive.com",
     trace: "on",
     video : "on",
-    screenshot : "on"
+    screenshot : "on",
+    "testIdAttribute": "name"
   },
 
   /* Configure projects for major browsers */
