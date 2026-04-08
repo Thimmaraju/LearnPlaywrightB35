@@ -4,6 +4,8 @@ import { faker } from '@faker-js/faker';
 import empdata from "../../testdata/addemployee.json"
 import ExcelJS from 'exceljs';
 
+let firstname ="Raju";
+
 test('Verify User can create Employee', async ({ page }) => {
 
 
@@ -30,7 +32,7 @@ test('Verify User can create Employee', async ({ page }) => {
 
     //Enter first name and Last name 
 
-    // await page.locator("input[name='firstName']").fill(empdata.firstname)
+     await page.locator("input[name='firstName']").fill(firstname)
     // await page.locator("input[name='lastName']").fill(empdata.lastname)
 
     //faker Js  

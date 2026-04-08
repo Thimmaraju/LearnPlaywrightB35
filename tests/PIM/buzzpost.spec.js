@@ -3,6 +3,15 @@ import { test, expect } from '@playwright/test';
 test.describe('OrangeHRM Buzz Module - Post Creation and Verification', () => {
   let page;
 
+
+  const credentails  = ["Admin", "admin123"]
+
+  let creds = {
+
+    username : "Admin",
+    password : "admin123"
+  }
+
   test.beforeEach(async ({ browser }) => {
     page = await browser.newPage();
     
@@ -17,8 +26,8 @@ test.describe('OrangeHRM Buzz Module - Post Creation and Verification', () => {
 
   test('Verify User can create a post in Buzz and it appears on top', async () => {
     // Step 2: Login as Admin
-    await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
-    await page.getByRole('textbox', { name: 'Password' }).fill('admin123');
+    await page.getByRole('textbox', { name: 'Username' }).fill(credentails[0]);
+    await page.getByRole('textbox', { name: 'Password' }).fill(credentails[1]);
     await page.getByRole('button', { name: 'Login' }).click();
     
     // Wait for dashboard to load
@@ -75,8 +84,8 @@ test.describe('OrangeHRM Buzz Module - Post Creation and Verification', () => {
 
   test('Verify User can like a post', async () => {
     // Login as Admin
-    await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
-    await page.getByRole('textbox', { name: 'Password' }).fill('admin123');
+    await page.getByRole('textbox', { name: 'Username' }).fill(creds.username);
+    await page.getByRole('textbox', { name: 'Password' }).fill(creds.password);
     await page.getByRole('button', { name: 'Login' }).click();
     await page.waitForLoadState('networkidle');
 
