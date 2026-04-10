@@ -1,5 +1,11 @@
 import {test , expect} from '@playwright/test';
 
+ const creds = {
+
+     username : "Admin",
+     password : "admin123"
+ }
+
 test.describe('Admin - Add Employment Status', () => {
   test('Admin-001: Verify Admin can add new employment status', async ({ page }) => {
     // Login as Admin      

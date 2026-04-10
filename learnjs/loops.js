@@ -47,3 +47,66 @@ for (let i=1; i<=10; i++){
 // 14
 // fizzbuzz
 
+// for(let i=1; i<=5; i++){
+
+//     test("xyz", ){
+
+
+//     }
+
+// }
+
+
+// while (condition){
+
+
+// }
+
+
+// let i = 6
+
+// while(i>=5){
+
+
+//     console.log(i)
+
+//     console.log("Raju")
+
+//     console.log("Vennela")
+
+//     console.log("Azeem")
+
+//     i++
+// }
+
+
+// do{
+
+
+// }while(condition)
+
+// let i = 6
+
+// do {
+
+//     console.log(i)
+
+//     console.log("Raju")
+
+//     console.log("Vennela")
+
+//     console.log("Azeem")
+
+//     i++
+
+// } while (i <= 5)
+
+
+// es6 
+
+// for in  - Objects 
+
+// for of  - Arrays , strings 
+
+// forEach  - Arrays 
+
