@@ -1,3 +1,5 @@
+
+const printnames = require('./functions');
 // var x // variable declartion 
 
 
@@ -35,27 +37,27 @@
 //const x = 30 
 
 
-if(true){
+// if(true){
     
-let stuname = "Sangeetha"
+// let stuname = "Sangeetha"
 
-stuname = "Punith"
+// stuname = "Punith"
 
-console.log(stuname)
+// console.log(stuname)
 
-}
-
-
-
-
-if(true){
+// }
 
 
 
-    console.log(stuname)
+
+// if(true){
 
 
-}
+
+//     console.log(stuname)
+
+
+// }
 
 
 
@@ -86,15 +88,15 @@ if(true){
 
 
 
-var x = 30 
+// var x = 30 
 
-var x = 45
+// var x = 45
 
-let y = "Raju"
+// let y = "Raju"
 
-//let y = "saketh"  //this is not possible 
+// //let y = "saketh"  //this is not possible 
 
-const z = "Punith"
+// const z = "Punith"
 
 //const z = "shashi"  //this is not possible 
 
@@ -105,7 +107,7 @@ const z = "Punith"
 // Javascript case sensitive language 
 
 
-const headerstext = await page.locator(h2).textContent()
+// const headerstext = await page.locator(h2).textContent()
 
 //const  headerstext = "Create a Rediffmail account"
 
@@ -115,11 +117,13 @@ const headerstext = await page.locator(h2).textContent()
 // Javascript is dynamically typed language 
 
 
-let x = 30   // number 
+// let x = 30   // number 
 
-  x = "raju"  // string   
+//   x = "raju"  // string   
 
 //  this is allowed 
 
 
 
+
+printnames()
