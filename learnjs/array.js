@@ -214,3 +214,34 @@ for(let element of ar2){
 
     console.log(element)
 }
+
+
+creds = [ {username: 1, password: 1}, {username: 2, password: 2},{username: 3, password: 3}]
+
+
+creds.forEach(element => {
+
+    
+    
+});
+
+
+arr = [420, 445, 560, 345]
+
+arr2 = arr.map(element => element/2)
+
+console.log(arr2)
+
+
+menuitems = [
+    'Admin', 'PIM',
+    'Leave', 'Time',
+    'Recruitment', 'My Info',
+    'Performance', 'Directory',
+    'Maintenance', 'Claim',
+    'Buzz'
+]
+
+modfied = menuitems.map(element => element.toUpperCase())
+
+console.log(modfied)

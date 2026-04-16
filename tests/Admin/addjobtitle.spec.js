@@ -41,11 +41,12 @@ test('Verify User can Job title', async ({ page }) => {
 
     await page.locator("(//label[normalize-space(text())='Job Title']/following::input)[1]").fill(faker.person.jobTitle())
 
-    await page.waitForTimeout(4000)
+   // await page.waitForTimeout(4000)
     // Enter Job description 
 
-    await page.locator("//textarea[@placeholder='Type description here']").fill("Automation testing")
+    await page.locator("//textarea[@placeholder='Type description here']").fill("1. Understanding requirements\n2. Writing test cases\n3.  prepare Test plan\n4. test envt set up\n5. test exceution")
 
+    await page.waitForTimeout(5000)
     // Enter Notes 
 
     await page.locator("//textarea[@placeholder='Add note']").fill("this is automation scripts")
