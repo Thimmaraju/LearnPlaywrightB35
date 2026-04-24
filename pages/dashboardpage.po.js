@@ -20,4 +20,5 @@ export class dashBoardPage {
         await this.openAdminModule()
     }
 
+    
 }

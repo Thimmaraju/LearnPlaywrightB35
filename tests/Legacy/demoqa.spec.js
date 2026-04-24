@@ -13,8 +13,8 @@ test('Enter text in to textbox and Verify the text displayed',  async ({ page })
   await page.locator('#permanentAddress').click();
   await page.locator('#permanentAddress').fill(data[3]);
   await page.getByRole('button', { name: 'Submit' }).click();
-  // await expect(page.getByText('Name:Raju G')).toBeVisible();
-  // await expect(page.getByText('Email:rajutester2673@gmail.com')).toBeVisible();
-  // await expect(page.getByText('Permananet Address :Bangalore')).toBeVisible();
-  // await expect(page.getByText('Current Address :Bangalore')).toBeVisible();
+  await expect(page.getByText('Name:Raju G')).toBeVisible();
+  await expect(page.getByText('Email:rajutester2673@gmail.com')).toBeVisible();
+  await expect(page.getByText('Permananet Address :Bangalore')).toBeVisible();
+  await expect(page.getByText('Current Address :Bangalore')).toBeVisible();
 });
