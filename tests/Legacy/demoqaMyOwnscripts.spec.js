@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-import data from "../testdata/textbox.json"
+import data from "../../testdata/textbox.json"
 
 test('Verify text Boxes', async ({ page }) => {
 

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { generatePhoneNumber } from '../utils/testDataGenerator';// Es6
+import { generatePhoneNumber } from '../../utils/testDataGenerator';// Es6
 
 //const { generatePhoneNumber} = require("../utils/testDataGenerator") // before es6
 
