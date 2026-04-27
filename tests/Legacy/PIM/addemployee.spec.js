@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { faker } from '@faker-js/faker';
 
-import empdata from "../../testdata/addemployee.json"
+//import empdata from "../../testdata/addemployee.json"
 import ExcelJS from 'exceljs';
 
 let firstname ="Raju";
