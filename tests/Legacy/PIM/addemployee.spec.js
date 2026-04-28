@@ -32,7 +32,7 @@ test('Verify User can create Employee', async ({ page }) => {
 
     //Enter first name and Last name 
 
-     await page.locator("input[name='firstName']").fill(firstname)
+    // await page.locator("input[name='firstName']").fill(firstname)
     // await page.locator("input[name='lastName']").fill(empdata.lastname)
 
     //faker Js  
@@ -65,10 +65,65 @@ test('Verify User can create Employee', async ({ page }) => {
     //await page.locator("(//label[normalize-space(text())='Employee Id']/following::input)[1]").fill("2345")
     await page.locator("(//label[normalize-space(text())='Employee Id']/following::input)[1]").fill(faker.string.alphanumeric(5))
 
+    await page.locator('//input[@type="file"]').setInputFiles('testdata/employeephoto.png')
     // click on save button 
     await page.locator("//button[@type='submit']").click()
 
     // Wheter Personal detals is visible or not   // assertions with in 5 sec if not vissible 
     await expect(page.locator("//h6[text()='Personal Details']")).toBeVisible()
+
+})
+
+
+test('Verify User Uploading word file as employee profile picture', async ({ page }) => {
+
+
+    // Launch the Url
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+
+    // Enter username 
+    await page.locator("input[name='username']").fill(process.env.APP_USERNAME)
+
+    //Password enter 
+    await page.locator("input[name='password']").fill(process.env.APP_PASSWORD)
+
+    // click on login button
+    await page.locator("button[type='submit']").click()
+
+    // Whether its naviated to dashboard page or not 
+    await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index')
+
+    // PIM 
+    await page.locator("(//a[@class='oxd-main-menu-item'])[2]").click()
+
+    // Add Employee
+    await page.locator("//a[normalize-space(text())='Add Employee']").click()
+
+
+    //Excel sheet 
+
+    const workbook = new ExcelJS.Workbook();
+    await workbook.xlsx.readFile('testdata/addemp.xlsx');
+
+    const worksheet = workbook.getWorksheet(1); // first sheet
+
+    // Read values
+    const firstName = worksheet.getRow(1).getCell(2).value;
+    const lastName = worksheet.getRow(2).getCell(2).value;
+
+    await page.locator("input[name='firstName']").fill(firstName.toString())
+    await page.locator("input[name='lastName']").fill(lastName.toString())
+
+
+
+    //Employee ID enter 
+
+    //await page.locator("(//label[normalize-space(text())='Employee Id']/following::input)[1]").fill("2345")
+    await page.locator("(//label[normalize-space(text())='Employee Id']/following::input)[1]").fill(faker.string.alphanumeric(5))
+
+    await page.locator('//input[@type="file"]').setInputFiles('testdata/testplan.docx')
+
+    // Wheter Personal detals is visible or not   // assertions with in 5 sec if not vissible 
+    await expect(page.locator("//span[text()='File type not allowed']")).toBeVisible()
 
 })
