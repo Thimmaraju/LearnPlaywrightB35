@@ -8,3 +8,4 @@ node_modules/
 /playwright/.auth/
 results.json
 .playwright-mcp
+downloads

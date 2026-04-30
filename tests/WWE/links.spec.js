@@ -14,6 +14,7 @@ test.describe('Automation - Working With Links', () => {
 
     await expect(page.getByText('Reset Password').first()).toBeVisible()
 
+    //or 
     await expect(page.locator("//button[text()=' Reset Password ']")).toBeVisible()
 
   })
@@ -22,10 +23,18 @@ test.describe('Automation - Working With Links', () => {
 
     await page.goto('https://trello.com/')
     await page.click("(//a[text()='Log in'])[1]")
-    await page.fill('input[id="username-uid1"]', "rajutester2673@gmail.com")
+    await page.fill('input[id="username-uid11"]', "rajutester2673@gmail.com")
   })
 })
 
 // nth(0)
 // .first()
 // lstat()
+
+//await page.locator('//a[@class="oxd-main-menu-item"]').fisrt().click()
+
+//await page.locator('//a[@class="oxd-main-menu-item"]').last().click()
+
+//await page.locator('//a[@class="oxd-main-menu-item"]').nth(2).click()
+
+//strict mode voilation  

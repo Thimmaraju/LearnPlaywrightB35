@@ -68,7 +68,7 @@ test.describe('Automation - Working With Elements', () => {
 
         const [download] = await Promise.all([
             page.waitForEvent('download'),
-            page.locator('//a[@href="download/search.png"]').click()
+            page.locator('//a[@href="download/TestLeaf Logo.png"]').click()
         ]);
 
         const suggestedFileName = download.suggestedFilename()
@@ -82,14 +82,16 @@ test.describe('Automation - Working With Elements', () => {
     test('Download Multiple files and assert', async ({ page }) => {
         await page.goto('https://the-internet.herokuapp.com/download')
 
-        const DownloadLinks = ['//a[@href="download/input.csv"]', "//a[text()='tkinter 2.png']"]
+        //const DownloadLinks = ['//a[@href="download/input.csv"]', "//a[text()='tkinter 2.png']"]
 
-        for (let link of DownloadLinks) {
+        const links = await page.$$('//div[@class="example"]/a')
+
+        for (let link of links) {
 
 
             const [download] = await Promise.all([
                 page.waitForEvent('download'),
-                page.locator(link).click()
+                link.click()
             ]);
 
             const suggestedFileName = download.suggestedFilename()
@@ -133,7 +135,7 @@ test.describe('Automation - Working With Elements', () => {
     test('Direct Download and assert example 2', async ({ page }) => {
 
         // Define the image URL
-        const imageUrl = 'https://track2training.com/wp-content/uploads/2021/07/apj.jpg?w=540';
+        const imageUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHkz-CtfvMGgRgdHNQsxEMfsV37rycmXyYn4jbyBlVnEZZ-edxrgDlTl1Rbfo6teEkc2zsRuzlDUSc71RWUp5JtoegBcvnZPuUMwRmkDw&s=10';
 
         // Fetch the image using Playwright's request API
         const response = await page.request.get(imageUrl);
@@ -151,7 +153,7 @@ test.describe('Automation - Working With Elements', () => {
             }
 
             // Define the file name and path to save the image inside the 'downloads' folder
-            const savePath = path.join(downloadsFolder, 'apj.jpg');
+            const savePath = path.join(downloadsFolder, 'virat.jpg');
 
             // Write the buffer to a file
             fs.writeFileSync(savePath, buffer);

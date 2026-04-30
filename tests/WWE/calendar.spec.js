@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const moment = require('moment');
+
 
 test.describe('Calendar Feature', () => {
 
@@ -16,13 +16,13 @@ test.describe('Calendar Feature', () => {
 
         //await page.locator('(//div[@class="oxd-date-input"]/input)[1]').fill('2023-10-12')
 
-        const date = moment().format('YYYY-DD-MM') 
+        // const date = moment().format('YYYY-DD-MM') 
 
-        console.log(date)
+        // console.log(date)
 
-        await page.locator('(//div[@class="oxd-date-input"]/input)[1]').fill(date);
+        await page.locator('(//div[@class="oxd-date-input"]/input)[1]').fill('01-01-2025');
 
-        await page.locator('(//div[@class="oxd-date-input"]/input)[2]').fill(moment().add(1, 'days').format('YYYY-DD-MM'))
+        await page.locator('(//div[@class="oxd-date-input"]/input)[2]').fill('01-08-2026')
     });
 
 

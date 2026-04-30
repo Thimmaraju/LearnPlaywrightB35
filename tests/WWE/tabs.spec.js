@@ -6,7 +6,7 @@ test.describe('Automation - Working With Elements', () => {
 
     await page.goto('https://the-internet.herokuapp.com/windows');
 
-    const [newTab] = await Promise.all([
+    const [newWindow] = await Promise.all([
       page.waitForEvent('popup'),
       page.click('//a[normalize-space()="Click Here"]')
     ]);
@@ -14,11 +14,11 @@ test.describe('Automation - Working With Elements', () => {
     // console.log(newTab.url());
     // expect(await newTab.title()).toBe('New Window');
 
-    const textvalue = await newTab.locator('.example>h3').textContent();
+    const textvalue = await newWindow.locator('.example>h3').textContent();
 
     console.log("Text on new page:", textvalue);
 
-    await expect(await newTab.title()).toBe('New Window');
+    await expect(await newWindow.title()).toBe('New Window');
 
     await page.waitForTimeout(5000)
   });
@@ -52,7 +52,7 @@ test.describe('Automation - Working With Elements', () => {
 
     await page.goto('https://www.flipkart.com/');
 
-    await page.locator('(//input[@name="q"])[1]').fill("Laptop Dell")
+    await page.locator('(//input[@name="q"])[1]').fill("Iphone")
 
     //await page.locator('input[name="q"]').press('Enter')
 
@@ -61,12 +61,12 @@ test.describe('Automation - Working With Elements', () => {
 
     const [newTab] = await Promise.all([
       page.waitForEvent('popup'),
-      await page.locator('(//a[@class="k7wcnx"])[2]').click()
+      page.locator("//div[text()='Apple iPhone 16 (Black, 128 GB)']").click()
      
     ]);
 
    
-    await expect(newTab.locator("//div[text()='Apply offers for maximum savings']")).toBeVisible()
+    await expect(newTab.locator("//div[text()='Product highlights']")).toBeVisible()
 
   
 
