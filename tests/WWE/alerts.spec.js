@@ -50,7 +50,7 @@ test.describe('Automation - Working with Alerts', () => {
     // Intercept the prompt and return a response
     page.on('dialog', async dialog => {
       expect(dialog.type()).toBe('prompt');
-      await dialog.accept("Manoj"); // Enter the value and accept
+      await dialog.accept("Sangeetha"); // Enter the value and accept
     });
     await page.waitForTimeout(5000)
   });

@@ -8,7 +8,7 @@ test('scroll to specific element', async ({ page }) => {
 
      await page.waitForTimeout(5000)
 
-    await page.locator("//h3[text()='The Incredibles']").click()
+    await page.locator("//h3[text()='The Incredibles']").scrollIntoViewIfNeeded()
 
     // let dJanagoMovieLink = await page.locator("//h3[contains(text(),'128. Hamilton')]");
 

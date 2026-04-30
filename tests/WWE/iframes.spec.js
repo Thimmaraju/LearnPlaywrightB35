@@ -5,7 +5,7 @@ test.describe('Automation - Working With Elements', () => {
 
         await page.goto('https://jqueryui.com/checkboxradio/')
         
-        await page.frameLocator('//iframe[@class="demo-frame"]').locator('label[for="checkbox-1"]').click()
+        await page.frameLocator('iframe[class="demo-frame"]').locator('label[for="checkbox-1"]').click()
 
         //await checkbox.click()
         await page.waitForTimeout(5000)
