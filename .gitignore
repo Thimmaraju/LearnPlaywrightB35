@@ -9,3 +9,5 @@ node_modules/
 results.json
 .playwright-mcp
 downloads
+allure-report
+allure-results

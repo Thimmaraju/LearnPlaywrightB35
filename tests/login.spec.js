@@ -19,7 +19,7 @@ test("Verify loginwith Valid credentials", async () =>{
 
   
     await login.loginwithcreds(process.env.APP_USERNAME, process.env.APP_PASSWORD)
-    await login.loginSuccess()
+    await login.loginSuccessss()
 
 
 
