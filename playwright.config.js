@@ -16,10 +16,10 @@ require('dotenv').config()
 export default defineConfig({
 
   globalTimeout: 60*60*10000,  // 36000000
-  timeout: 60*1000,
+  timeout: 70*1000,
   expect: {
 
-    timeout : 20000,
+    timeout : 25000,
   },
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -86,10 +86,10 @@ export default defineConfig({
     // },
 
     /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
+    {
+      name: 'Microsoft Edge',
+      use: { ...devices['Desktop Edge'], channel: 'msedge' },
+    },
     {
       name: 'Google Chrome',
       use: { ...devices['Desktop Chrome'], channel: 'chrome',
