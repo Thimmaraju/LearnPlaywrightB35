@@ -8,6 +8,7 @@ export class dashBoardPage {
         this.page = page
         this.PIMMenu = page.locator('//a[@href="/web/index.php/pim/viewPimModule"]')
         this.adminMenu = page.locator('//a[@href="/web/index.php/admin/viewAdminModule"]')
+        this.adminMenu = page.locator('//a[@href="/web/index.php/admin/ViewLeave"]')
        
     }
 
@@ -18,6 +19,11 @@ export class dashBoardPage {
 
     async openAdminModule(){
         await this.openAdminModule()
+    }
+
+
+    async openLeaveModule(){
+        await this.openleaveModule()
     }
 
     
