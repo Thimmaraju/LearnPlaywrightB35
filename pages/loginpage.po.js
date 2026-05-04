@@ -7,7 +7,7 @@ export class loginPage{
 
          this.page = page
          this.logo = page.locator('img[alt="company-branding"]')
-         this.usernameInput = page.locator('//input[@name="username"]')
+         this.usernameInput = page.locator('input[name="username"]')
          this.passwordInput = page.locator('//input[@name="password"]')
          this.loginBtn = page.locator('button[type="submit"]')
          this.loginErrorMessage = page.locator("//p[text()='Invalid credentials']")
