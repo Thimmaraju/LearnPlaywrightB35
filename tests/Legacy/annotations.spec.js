@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 
-test.describe.only("Group 1", () => {
+test.describe("Group 1", () => {
 
 
     test('Test case 1', async () => {
