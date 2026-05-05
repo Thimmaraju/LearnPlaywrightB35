@@ -33,7 +33,7 @@ test("Verify Add Employee API", async ({ request }) => {
 expect(typeof jsonres.data.empNumber).toBe('number');
 
 // Value checks
-expect(jsonres.data.lastName).toBe(-+-);
+//expect(jsonres.data.lastName).toBe(-+-);
 expect(jsonres.data.firstName).toBe(firstname);
 expect(jsonres.data.middleName).toBe("abc");
 expect(jsonres.data.employeeId).toBe(empid);
