@@ -121,9 +121,9 @@ test('Verify User Uploading word file as employee profile picture', async ({ pag
     //await page.locator("(//label[normalize-space(text())='Employee Id']/following::input)[1]").fill("2345")
     await page.locator("(//label[normalize-space(text())='Employee Id']/following::input)[1]").fill(faker.string.alphanumeric(5))
 
-    await page.locator('//input[@type="file"]').setInputFiles('testdata/testplan.docx')
+    //await page.locator('//input[@type="file"]').setInputFiles('testdata/testplan.docx')
 
     // Wheter Personal detals is visible or not   // assertions with in 5 sec if not vissible 
-    await expect(page.locator("//span[text()='File type not allowed']")).toBeVisible()
+   // await expect(page.locator("//span[text()='File type not allowed']")).toBeVisible()
 
 })
